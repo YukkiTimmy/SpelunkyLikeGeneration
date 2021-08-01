@@ -267,7 +267,7 @@ func printMap():
 		for x in WIDTH:
 			yield(get_tree().create_timer(0.0001), "timeout")
 
-			# variabel to the path
+			# variable to the path
 			var pathName = ""
 
 			# place a random room based on the character given
