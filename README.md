@@ -5,7 +5,7 @@ You can change the amount of rows and colums, as well as the room size as you wa
 
 It's probably not the best or compact solution but it works really reliable and it's easy to add a player or anything else you want.
 
-I know the player scrpt is pretty rough around the edges but it's more about the generation!
+I know the player script is pretty rough around the edges, but it's more about the generation then the player!
 
 
 Use it as your heart's content!
