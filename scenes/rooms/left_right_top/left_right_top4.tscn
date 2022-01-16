@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/TileSets/tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/props/oneways/OneWayPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/props/ladder/Ladder.tscn" type="PackedScene" id=3]
+
+[node name="left_right_top4" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 8, 0, 3, 8, 0, 4, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 8, 0, 65540, 8, 0, 65541, 6, 0, 65542, 6, 0, 65545, 3, 0, 65551, 0, 0, 131072, 8, 0, 131077, 8, 0, 131078, 8, 0, 131079, 7, 0, 131080, 7, 0, 131081, 4, 0, 131082, 7, 0, 131087, 0, 0, 196617, 3, 0, 262150, 6, 0, 262151, 6, 0, 262153, 3, 0, 327684, 7, 0, 327685, 6, 0, 327686, 0, 0, 327687, 0, 0, 327688, 7, 0, 327689, 7, 0, 327690, 7, 0, 327691, 6, 0, 327692, 6, 0, 327693, 7, 0, 393221, 0, 0, 393222, 0, 0, 393223, 8, 0, 393227, 8, 0, 393228, 8, 0, 458757, 8, 0, 458758, 8, 0, 524288, 6, 0, 524290, 6, 0, 524297, 6, 0, 524303, 6, 0, 589824, 0, 0, 589825, 6, 0, 589826, 0, 0, 589827, 6, 0, 589832, 6, 0, 589833, 0, 0, 589834, 6, 0, 589835, 6, 0, 589839, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 6, 0, 655365, 6, 0, 655366, 6, 0, 655367, 6, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 6, 0, 655373, 6, 0, 655374, 6, 0, 655375, 0, 0 )
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 3 )]
+position = Vector2( 152, 72 )
+height = 4
+
+[node name="Oneways" type="Node2D" parent="."]
+
+[node name="OneWayPlatform" parent="Oneways" instance=ExtResource( 2 )]
+position = Vector2( 152, 40 )

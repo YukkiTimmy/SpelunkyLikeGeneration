@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/TileSets/tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/props/oneways/OneWayPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/props/ladder/Ladder.tscn" type="PackedScene" id=3]
+
+[node name="left_right_bottom4" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65541, 8, 0, 65542, 0, 0, 65543, 8, 0, 65549, 8, 0, 65550, 0, 0, 65551, 0, 0, 131072, 8, 0, 131078, 8, 0, 131084, 3, 0, 131086, 8, 0, 131087, 8, 0, 196610, 3, 0, 196611, 6, 0, 196617, 6, 0, 196618, 6, 0, 196619, 6, 0, 196620, 4, 0, 262145, 7, 0, 262146, 4, 0, 262147, 8, 0, 262152, 6, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 3, 0, 327682, 3, 0, 327686, 6, 0, 327687, 6, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 3, 0, 393218, 3, 0, 393221, 6, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 8, 0, 393227, 8, 0, 393228, 7, 0, 393229, 7, 0, 458754, 3, 0, 458757, 8, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 524290, 3, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 8, 0, 524303, 6, 0, 589824, 6, 0, 589825, 6, 0, 589826, 6, 0, 589830, 8, 0, 589831, 0, 0, 589832, 0, 0, 589839, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 6, 0, 655367, 8, 0, 655368, 8, 0, 655371, 0, 0, 655372, 0, 0, 655373, 6, 0, 655374, 6, 0, 655375, 0, 0 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 3 )]
+position = Vector2( 40, 136 )
+height = 6
+
+[node name="Ladder2" parent="Ladders" instance=ExtResource( 3 )]
+position = Vector2( 200, 88 )
+height = 4
+
+[node name="OneWays" type="Node2D" parent="."]
+
+[node name="OneWayPlatform" parent="OneWays" instance=ExtResource( 2 )]
+position = Vector2( 40, 72 )
+
+[node name="OneWayPlatform2" parent="OneWays" instance=ExtResource( 2 )]
+position = Vector2( 200, 56 )

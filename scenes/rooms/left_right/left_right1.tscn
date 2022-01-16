@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/TileSets/tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/props/oneways/OneWayPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/props/ladder/Ladder.tscn" type="PackedScene" id=3]
+
+[node name="left_right1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65549, 8, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131075, 3, 0, 131086, 0, 0, 131087, 0, 0, 196608, 8, 0, 196609, 7, 0, 196610, 7, 0, 196611, 4, 0, 196612, 7, 0, 196616, 6, 0, 196617, 6, 0, 196622, 8, 0, 196623, 0, 0, 262147, 3, 0, 262151, 6, 0, 262152, 0, 0, 262153, 0, 0, 262159, 8, 0, 327683, 3, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 6, 0, 393219, 3, 0, 393222, 6, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458755, 3, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 6, 0, 524288, 6, 0, 524291, 3, 0, 524293, 6, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 6, 0, 589824, 0, 0, 589825, 6, 0, 589827, 3, 0, 589828, 6, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589839, 6, 0, 655360, 0, 0, 655361, 0, 0, 655362, 6, 0, 655363, 6, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 6, 0, 655374, 6, 0, 655375, 0, 0 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Ladders" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Ladders" instance=ExtResource( 3 )]
+position = Vector2( 56, 152 )
+height = 8
+
+[node name="OneWays" type="Node2D" parent="."]
+
+[node name="OneWayPlatform" parent="OneWays" instance=ExtResource( 2 )]
+position = Vector2( 56, 56 )

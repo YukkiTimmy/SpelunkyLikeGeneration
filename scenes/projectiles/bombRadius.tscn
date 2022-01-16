@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/projectiles/bombRadius.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[node name="bombRadius" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = -4.0
+margin_top = -2.0
+margin_right = 4.0
+margin_bottom = 2.0
+color = Color( 0.537255, 0.0509804, 0.498039, 0.505882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_shape_entered" from="." to="." method="_on_bombRadius_body_shape_entered"]

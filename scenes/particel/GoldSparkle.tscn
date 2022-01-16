@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sprites/light.png" type="Texture" id=1]
+[ext_resource path="res://scenes/particel/GoldSparkle.gd" type="Script" id=2]
+
+[node name="GoldSparkle" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 1 )
+texture_scale = 0.1
+color = Color( 0.996078, 0.894118, 0.501961, 1 )
+energy = 0.8
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
